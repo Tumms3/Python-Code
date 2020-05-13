@@ -1,0 +1,138 @@
+#Sample Tax Calculator
+#Below is a tax calculator i created with obviously incorrect official tax brackets, but is used for an example for this project
+
+from time import sleep
+taxbracket={}
+filingStatus=()
+agi=()
+tax=()
+
+print ("The Tax Calculator")
+
+while True:
+
+    print ("Menu:",  "(C)alculate Taxes", "(L)ook at data", "(E)xit")
+    optionSelect=input("What would you would to do?: ")
+    optionSelect=optionSelect.upper()
+
+    if optionSelect == "C":
+        while True:
+
+                print("What is your current filing status?")
+                print("Are you single (S), or joint marriage (J),", end= ' ')
+                print("Married, but filing seperately (M)", "Head of household (H)")
+                filingStatus=input("Please correctly enter your filing status:")
+                filingStatus=filingStatus.upper()
+
+                if  (filingStatus != 'S') and (filingStatus != 'J') and \
+                    (filingStatus != 'M') and (filingStatus != 'H'):
+                    print ("Error")
+                    sleep (3)
+                    continue
+                try:
+                    agi=int(input("Please enter your Adjusted Gross income: "))
+                except ValueError:
+                        print ("Error")
+                        sleep(3)
+                        continue
+                
+                
+                if filingStatus == 'S':
+                    filingStatus = 'single'
+                    
+                    if agi <10000:
+                        taxbracket= .10
+                    elif agi <40000:
+                        taxbracket= .15
+                    elif agi <85000:
+                        taxbracket= .25
+                    elif agi <165000:
+                        taxbracket= .30
+                    elif agi <220000:
+                        taxbracket= .33
+                    elif agi <550000:
+                        taxbracket=.35
+                    elif agi <600000:
+                        taxbracket=.40
+                    else:
+                        print("Error")
+                        break
+                    break
+    
+                elif filingStatus == 'J':
+                    filingStatus = 'Married and filing jointly'
+                    if agi <10000:
+                        taxbracket= .10
+                    elif agi <40000:
+                        taxbracket= .11
+                    elif agi <85000:
+                        taxbracket= .25
+                    elif agi <165000:
+                        taxbracket= .30
+                    elif agi <220000:
+                        taxbracket= .33
+                    elif agi <550000:
+                        taxbracket=.35
+                    elif agi <600000:
+                        taxbracket=.40
+                    else:
+                        print("Error")
+                        break
+                    break
+                elif filingStatus == 'M':
+                    filingStatus = 'Married but filing seperately'
+                    if agi <10000:
+                        taxbracket= .10
+                    elif agi <40000:
+                        taxbracket= .11
+                    elif agi <85000:
+                        taxbracket= .25
+                    elif agi <165000:
+                        taxbracket= .30
+                    elif agi <220000:
+                        taxbracket= .33
+                    elif agi <550000:
+                        taxbracket=.35
+                    elif agi <600000:
+                        taxbracket=.40
+                    else:
+                        print("Error")
+                        break
+                    break
+                elif filingStatus == 'H':
+                    filingStatus = 'Head of household'
+                    if agi <10000:
+                        taxbracket= .10
+                    elif agi <40000:
+                        taxbracket= .11
+                    elif agi <85000:
+                        taxbracket= .25
+                    elif agi <165000:
+                        taxbracket= .30
+                    elif agi <220000:
+                        taxbracket= .33
+                    elif agi <550000:
+                        taxbracket=.35
+                    elif agi <600000:
+                        taxbracket=.40
+                    else:
+                        print("Error")
+                        break
+                    break
+        tax=(agi*taxbracket)
+        print( "Thanks, you have been taxed [", (tax), "$ ] Enjoy. ")
+        print ("You have about [", (agi-tax), "$ ] left to your name.")
+        sleep(10)
+    elif optionSelect == 's':
+            print("You filed under the current status of [", (filingStatus), "] ")
+            print("Your Gross income is [", (agi), "$ ]")
+            print("You belong in the [", (taxbracket), "% ] tax bracket")
+            print("You get taxed [", (tax), "$ ] \n\n ")
+            sleep(10)
+    elif optionSelect =='E':
+            print("Bye.")
+            sleep(3)
+            break
+    else:
+            print("Error")
+            sleep(5)
