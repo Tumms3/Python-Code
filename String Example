@@ -1,0 +1,32 @@
+#Random String exmaples
+#All this code are small examples of strings that can be used in python programs
+
+NoahsString = "I eat pizza"
+print (NoahsString)
+#String example
+
+MyJoke = '''What do you call a cow with no legs?
+Ground Beef.'''
+print (MyJoke)
+#Double Quotes Example
+
+NoahSecondJoke = 'I\'m sure you would love a good joke, but sadly I do not have one'
+print (NoahSecondJoke)
+#Backslash example
+
+myLASTNAME = "Smith"
+print ("My name is %s." %myLASTNAME)
+#multiple embedded values using %s, %d, and %
+myFIRSTNAME = "Noah"
+myMIDDLENAME = "Jordan"
+print ("My full name is %s %s." % (myFIRSTNAME, myMIDDLENAME) )
+#multiplying strings
+
+print ( "I\'m going", end= " ")
+print ( "eat " *10, end= " ")
+print ( "pizza\n\n")
+#removing the newline of a print statement with end
+
+print ("print " * 2, end=" ")
+print ("copy and print")
+#adding newlines to print statements
