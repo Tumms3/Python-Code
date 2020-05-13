@@ -1,0 +1,31 @@
+#Phone Book examples
+#This code creates a phonebook that can add peoples names and numbers and gives you the option to list said name and number was you wish
+#Start
+input("Hello, and welcome to the phonebook lab, to start, please press <enter>")
+Numbers={
+    }
+#Asks to enter a name
+inName=input("\n\nEnter a name: ")
+#Asks to enter a number
+inPhoneNumber=input("Enter a number: ")
+#Adds to map
+Numbers[inName]=inPhoneNumber
+print("Thanks, now ill ask you for a second combination")
+#Asks for a name
+inName=input("\n\nEnter another name: ")
+#Asks for a number
+inPhoneNumber=input("Enter another number: ")
+#Adds to map
+Numbers[inName]=inPhoneNumber
+print("Thank you, just one more combination and ill stop bothering you")
+#Asks for a name
+inName=input("\n\nEnter another name: ")
+#Asks for a number
+inPhoneNumber=input("Enter another number: ")
+#Adds to number
+Numbers[inName]=inPhoneNumber
+print("Now moving to the last part of this lab")
+#Asks for you to enter a name and itll provide you with their number
+inName=input ("Please enter a name, and ill give you their number: ")
+print ("The Number of" , inName, "is" , Numbers[inName])
+    
