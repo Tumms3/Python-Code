@@ -1,0 +1,11 @@
+#Multipliers
+#This code will ask you for two numbers then multiplies them together
+number=int(input("enter a number:" ) )
+
+print ("You entered", number )
+
+othernumber=int(input("enter another number:" ) )
+
+print ("You entered", othernumber)
+
+print (number, "times", othernumber, "is",  number*othernumber)
