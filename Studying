@@ -1,0 +1,28 @@
+#Studying Practice
+#This code helps you detemrine if you're studying enough or if you aren't
+#Shows the current time
+import time
+#Pre-defining a map for the class
+classHrs = {"inhours1":0, "inhours2":0, "inhours3":0}
+
+#Asks user for the number of hours spent on the first class
+inhours=int(input("How many hours a week should you spend on your first class?:") )
+
+#Asks user for the number of hours spent on the second class
+inhours2=int(input("How many hours a week should you spend on your second class?:") )
+
+#Asks user for the number of hours spent on the third class
+inhours3=int(input("How many hours a week should you spend on your third class?:") )
+
+#Then asks the user how much plan to study each week
+inweek=int(input("How many hours a week do you plan to study?:") )
+
+#Asks user how often they are actually studying each week
+trueweek=int(input("How many hours are you actually studying?:") )
+
+#Code then adds up all the hours and divides by numbers of days that the user input on inweek
+sum = inhours+inhours2+inhours3
+if sum < trueweek:
+    print("You are probably studying enough") 
+elif sum > trueweek:
+    print("You need to study more")
