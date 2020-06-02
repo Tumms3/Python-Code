@@ -1,0 +1,62 @@
+#Welcome prints
+import time
+import turtle
+t=turtle.Pen()
+print ('Hello, and welcome to the shape Function drawer')
+print('Lets begin to draw some shapes!')
+
+def square ():
+    t.forward(150)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(150)
+    t.left(90)
+    t.forward(100)
+def rectangle ():
+    t.forward(190)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(190)
+    t.left(90)
+    t.forward(100)
+while True:
+    letter=input("Which shape would you like to draw, a Circle, Square, or a Rectangle?")
+    num=int(input( 'How many times would you like this drawn?'))
+    size=int(input('How big do you wish for this shape to be?'))
+    c=int(size/2)
+    m=0
+    pat=int(360/num)
+    mum=num
+    print(pat)
+    if letter == "C":
+        for i in range (0,num):
+            m=m+1
+            p=int(pat*m)
+            t.circle(size)
+            t.penup()
+            t.home()
+            t.left(180)
+            t.circle(c,p)
+            t.left(180)
+            t.pendown()
+    elif letter == "S":
+        for i in range (0,num):
+            m=m+1
+            p=int(pat*m)
+            square()
+    elif letter == "R":
+        for i in range (0,num):
+            m=m+1
+            p=int(pat*m)
+            rectangle()
+    responce=input("Would you like to (Q)uit, or (C)ontinue:")
+    if responce == 'Q':
+        print("Okay bye :(")
+        time.sleep(1)
+        break
+    elif responce == 'C':
+        print("We will continue  :)")
+        time.sleep(1)
+        continue
