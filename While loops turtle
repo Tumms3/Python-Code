@@ -1,0 +1,48 @@
+#Beginning of Code
+import time
+import turtle
+t=turtle.Pen()
+t.reset()
+while True:
+     #Asks user which shape they wish to use
+     shape=input("What shape would you like to draw?" )
+     #Confirms user choice
+     print("You chose the letter", shape)
+     #Asks user how many times they wish to draw said decision
+     howmany=int(input("How many times would you like this drawn?") )
+     #This code spells "N"
+     if shape == 'N':
+          for x in range(0, howmany):
+               t.left(90)
+               t.forward(100)
+               t.right(140)
+               t.forward(130)
+               t.left(140)
+               t.forward(100)
+               t.left(20)
+     elif shape == 'O':
+          #This code spells a "O"
+          for x in range(0, howmany):
+               t.circle(25)
+               t.left(20)
+     #This code spells out a "A"
+     elif shape == 'S':
+          for x in range (0, howmany):
+               t.left(90)
+               t.forward(100)
+               t.right(90)
+               t.forward(100)
+               t.right(90)
+               t.forward(100)
+               t.right(90)
+               t.forward(100)
+               t.left(20)
+     responce=input("Would you like to (Q)uit, or (C)ontinue:")
+     if responce == 'Q':
+          print("bye")
+          time.sleep(1)
+          break
+     elif responce == 'C':
+          print("We will continue")
+          time.sleep(1)
+          continue
